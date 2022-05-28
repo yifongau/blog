@@ -3,7 +3,7 @@ from flask import url_for
 from app import app, pages
 
 app.config['FREEZER_DESTINATION'] = 'docs' 
-app.config['FREEZER_DESTINATION_IGNORE'] = ['.git*', 'CNAME']
+app.config['FREEZER_DESTINATION_IGNORE'] = 'CNAME'
 freezer = Freezer(app)
 
 @freezer.register_generator
