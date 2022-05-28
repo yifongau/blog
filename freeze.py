@@ -2,7 +2,7 @@ from flask_frozen import Freezer
 from flask import url_for
 from app import app, pages
 
-
+app.config['FREEZER_DESTINATION'] = 'docs' 
 app.config['FREEZER_DESTINATION_IGNORE'] = ['.git*', 'CNAME']
 freezer = Freezer(app)
 
